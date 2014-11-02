@@ -45,6 +45,17 @@ Blockly.Language.console_print = {
     }
 };
 
+Blockly.Language.console_print_variables = {
+    category: 'Console',
+    helpUrl: '',
+    init: function() {
+        this.setColour( 180 );
+        this.appendDummyInput( "" )
+            .appendTitle( "Print" )
+            .appendTitle()
+    }
+}
+
 
 // define generators
 Blockly.propc = Blockly.Generator.get('propc');
