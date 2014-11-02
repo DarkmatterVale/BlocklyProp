@@ -52,7 +52,9 @@ Blockly.Language.console_print_variables = {
         this.setColour( 180 );
         this.appendDummyInput( "" )
             .appendTitle( "Print" );
-        this.appendValueInput( 'VALUE' ).setCheck( Number );
+        this.appendValueInput( 'VALUE', Number )
+            .setCheck( Number );
+        this.setInputsInline( true, null );
         this.setPreviousStatement( true, null );
         this.setNextStatement( true, null );
     }
