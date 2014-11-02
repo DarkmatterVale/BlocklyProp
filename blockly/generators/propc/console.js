@@ -51,8 +51,8 @@ Blockly.Language.console_print_variables = {
     init: function() {
         this.setColour( 180 );
         this.appendDummyInput( "" )
-            .appendTitle( "Print" )
-        this.appendValueInput( "VALUE", ).setNumberCheck();
+            .appendTitle( "Print" );
+        this.appendValueInput( 'VALUE' ).setCheck( Number );
         this.setPreviousStatement( true, null );
         this.setNextStatement( true, null );
     }
@@ -66,4 +66,10 @@ Blockly.propc.console_print = function() {
     var text = this.getTitleValue('TEXT')
 
     return 'print("' + text + '\\r");\n';
+};
+
+Blockly.propc.console_print_variables = function() {
+    var value = this.getInputValue( 'VALUE' );
+    
+    return 'print( ' + value + ' );';
 };
