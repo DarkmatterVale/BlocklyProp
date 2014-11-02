@@ -56,7 +56,7 @@ Blockly.Language.console_print_variables = {
         this.setPreviousStatement( true, null );
         this.setNextStatement( true, null );
     }
-}
+};
 
 
 // define generators
