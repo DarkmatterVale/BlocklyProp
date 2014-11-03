@@ -63,13 +63,13 @@ Blockly.Language.console_print_variables = {
 Blockly.propc = Blockly.Generator.get('propc');
 
 Blockly.propc.console_print = function() {
-    var text = this.getTitleValue('TEXT')
+    var text = this.getTitleValue('VALUE')
 
     return 'print("' + text + '\\r");\n';
 };
 
 Blockly.propc.console_print_variables = function() {
-    var value = Blockly.propc.ValueToCode( this, 'VALUE', Blockly.propc.ORDER_ATOMIC ) || '1000';
+    var value = Blockly.propc.valueToCode( this, 'VALUE', Blockly.propc.ORDER_ATOMIC ) || '1000';
     
     return 'print( "' + value + '\\r" );\n';
 };
