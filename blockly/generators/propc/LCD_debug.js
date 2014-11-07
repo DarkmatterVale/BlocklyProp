@@ -116,8 +116,8 @@ Blockly.propc.debug_lcd_init = function() {
     var lines = this.getTitleValue('LINES');
 
     //TO DO: HOW TO INITIALIZE AN LCD
-    Blockly.propc.definitions_['define_debug_lcd'] = '';
-    Blockly.propc.setups_['setup_debug_lcd'] = '';
+    //Blockly.propc.definitions_['define_debug_lcd'] = '';
+    Blockly.propc.setups_['setup_debug_lcd'] = 'serial *lcd';
 
     return '';
 };
